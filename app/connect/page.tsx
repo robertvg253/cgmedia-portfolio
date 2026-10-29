@@ -1,9 +1,14 @@
+import type { Viewport } from "next";
 import { client } from "@/sanity/lib/client";
 import DynamicText from "@/components/DynamicText";
 import ConnectForm from "@/components/ConnectForm";
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
+
+export const viewport: Viewport = {
+  themeColor: '#000000',
+};
 
 export default async function ConnectPage() {
   let data = null;

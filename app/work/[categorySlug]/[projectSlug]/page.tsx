@@ -59,7 +59,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ catego
       <div className="px-3 pt-6">
         <Link
           href={`/work/${categorySlug}`}
-          className="group inline-flex items-center gap-2 text-xs md:text-sm tracking-[0.2em] uppercase font-normal text-black hover:opacity-50 transition-opacity mb-12"
+          className="group inline-flex items-center gap-2 text-xs md:text-sm tracking-[0.2em] uppercase font-normal text-black hover:opacity-50 active:scale-95 transition-transform duration-200 mb-12"
         >
           ← {formattedCategory}
         </Link>

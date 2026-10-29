@@ -54,7 +54,7 @@ export default async function CategoryProjectsPage({ params }: { params: Promise
       <div className="px-3 pt-6">
         <Link
           href="/work"
-          className="group inline-flex items-center gap-2 text-xs md:text-sm tracking-[0.2em] uppercase font-normal text-black hover:opacity-50 transition-opacity mb-12"
+          className="group inline-flex items-center gap-2 text-xs md:text-sm tracking-[0.2em] uppercase font-normal text-black hover:opacity-50 active:scale-95 transition-transform duration-200 mb-12"
         >
           ← BACK
         </Link>
@@ -82,7 +82,7 @@ export default async function CategoryProjectsPage({ params }: { params: Promise
           <Link
             key={project._id}
             href={`/work/${categorySlug}/${project.slug}`}
-            className="relative aspect-square w-full block overflow-hidden group"
+            className="relative aspect-square w-full block overflow-hidden group active:scale-95 transition-transform duration-200"
           >
             {project.coverImageUrl ? (
               <Image

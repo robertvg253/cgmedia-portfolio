@@ -16,7 +16,7 @@ export default function BackButton({
 }: BackButtonProps) {
   const router = useRouter();
 
-  const buttonClasses = `group inline-flex items-center gap-2 text-xs md:text-sm tracking-[0.2em] uppercase font-normal text-black hover:opacity-50 transition-opacity cursor-pointer ${className}`;
+  const buttonClasses = `group inline-flex items-center gap-2 text-xs md:text-sm tracking-[0.2em] uppercase font-normal text-black hover:opacity-50 active:scale-95 transition-transform duration-200 cursor-pointer ${className}`;
 
   if (href) {
     return (

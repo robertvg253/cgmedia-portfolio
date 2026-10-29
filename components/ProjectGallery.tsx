@@ -42,7 +42,7 @@ export default function ProjectGallery({ gallery, projectTitle }: ProjectGallery
             <div
               key={item?._key || index}
               onClick={() => setSelectedImage(rawUrl)}
-              className="relative aspect-square w-full cursor-pointer overflow-hidden group"
+              className="relative aspect-square w-full cursor-pointer overflow-hidden group active:scale-95 transition-transform duration-200"
             >
               <Image
                 src={thumbUrl || rawUrl}

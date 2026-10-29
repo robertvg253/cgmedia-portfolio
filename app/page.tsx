@@ -1,9 +1,14 @@
+import type { Viewport } from 'next'
 import { client } from '@/sanity/lib/client'
 import { groq } from 'next-sanity'
 import DynamicText from '@/components/DynamicText'
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
+
+export const viewport: Viewport = {
+  themeColor: '#000000',
+};
 
 export default async function Home() {
   const query = groq`*[_type == "homeSettings"][0]{ 
@@ -72,7 +77,7 @@ export default async function Home() {
               href="https://instagram.com/cg.mediaa"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs uppercase tracking-[0.2em] font-medium hover:opacity-60 transition-opacity flex items-center gap-2"
+              className="text-xs uppercase tracking-[0.2em] font-medium hover:opacity-60 active:scale-95 transition-transform duration-200 flex items-center gap-2"
             >
               <svg
                 className="w-5 h-5"
@@ -94,7 +99,7 @@ export default async function Home() {
 
           <a
             href="mailto:cgmediaproductions1@gmail.com"
-            className="text-xs uppercase tracking-[0.2em] font-medium hover:opacity-60 transition-opacity"
+            className="inline-block text-xs uppercase tracking-[0.2em] font-medium hover:opacity-60 active:scale-95 transition-transform duration-200"
           >
             EMAIL: CGMEDIAPRODUCTIONS1@GMAIL.COM
           </a>
