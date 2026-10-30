@@ -1,38 +1,34 @@
 "use client";
 
+import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 
 interface BackButtonProps {
-  className?: string;
-  label?: string;
-  href?: string;
+  href: string;
+  label: string;
 }
 
-export default function BackButton({
-  className = "",
-  label = "BACK",
-  href,
-}: BackButtonProps) {
+export default function BackButton({ href, label }: BackButtonProps) {
   const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
 
-  const buttonClasses = `group inline-flex items-center gap-2 text-xs md:text-sm tracking-[0.2em] uppercase font-normal text-black hover:opacity-50 active:scale-95 transition-transform duration-200 cursor-pointer ${className}`;
-
-  if (href) {
-    return (
-      <Link href={href} className={buttonClasses}>
-        ← {label}
-      </Link>
-    );
-  }
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (isLoading) return;
+    setIsLoading(true);
+    router.push(href);
+  };
 
   return (
-    <button
-      type="button"
-      onClick={() => router.back()}
-      className={buttonClasses}
+    <a
+      href={href}
+      onClick={handleClick}
+      aria-disabled={isLoading}
+      className={`group inline-flex items-center gap-2 text-xs md:text-sm tracking-[0.2em] uppercase font-normal text-black hover:opacity-50 active:scale-95 active:opacity-50 transition-all duration-200 mb-12 cursor-pointer ${
+        isLoading ? "pointer-events-none opacity-50" : ""
+      }`}
     >
-      ← {label}
-    </button>
+      {label}
+    </a>
   );
 }

@@ -17,13 +17,37 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'CG Media | Production House',
-  description: 'Miami-based production house specializing in photography and film.',
+  metadataBase: new URL('https://cgmediaproductions.com'),
+  title: {
+    default: 'CG Media | Production House',
+    template: '%s | CG Media',
+  },
+  description: 'Miami-based production house specializing in photography and film, focusing on hospitality and lifestyle.',
   icons: {
-    icon: '/icon.png?v=2',
-    shortcut: '/icon.png?v=2',
-    apple: '/icon.png?v=2',
-  }
+    icon: '/icon.png?v=3',
+    shortcut: '/icon.png?v=3',
+    apple: '/icon.png?v=3',
+  },
+  openGraph: {
+    title: 'CG Media | Production House',
+    description: 'Miami-based production house specializing in photography and film, focusing on hospitality and lifestyle.',
+    url: 'https://cgmediaproductions.com',
+    siteName: 'CG Media',
+    images: [
+      {
+        url: '/icon.png?v=3',
+        alt: 'CG Media',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'CG Media | Production House',
+    description: 'Miami-based production house specializing in photography and film.',
+    images: ['/icon.png?v=3'],
+  },
 };
 
 export const viewport: Viewport = {

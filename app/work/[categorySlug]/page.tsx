@@ -3,6 +3,7 @@ import Image from "next/image";
 import { client } from "@/sanity/lib/client";
 import { notFound } from "next/navigation";
 import DynamicText from "@/components/DynamicText";
+import BackButton from "@/components/BackButton";
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -52,12 +53,7 @@ export default async function CategoryProjectsPage({ params }: { params: Promise
   return (
     <main className="min-h-screen bg-white pt-28 px-[5px] pb-[5px] text-black">
       <div className="px-3 pt-6">
-        <Link
-          href="/work"
-          className="group inline-flex items-center gap-2 text-xs md:text-sm tracking-[0.2em] uppercase font-normal text-black hover:opacity-50 active:scale-95 transition-transform duration-200 mb-12"
-        >
-          ← BACK
-        </Link>
+        <BackButton href="/work" label="← BACK" />
       </div>
 
       <div className="flex flex-col items-center justify-center pt-8 mb-14 md:mb-20">

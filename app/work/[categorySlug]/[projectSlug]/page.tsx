@@ -1,9 +1,9 @@
-import Link from "next/link";
 import Image from "next/image";
 import { client } from "@/sanity/lib/client";
 import { notFound } from "next/navigation";
 import ProjectGallery from "@/components/ProjectGallery";
 import DynamicText from "@/components/DynamicText";
+import BackButton from "@/components/BackButton";
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -57,12 +57,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ catego
   return (
     <main className="min-h-screen bg-white pt-28 px-[5px] pb-[5px] text-black">
       <div className="px-3 pt-6">
-        <Link
-          href={`/work/${categorySlug}`}
-          className="group inline-flex items-center gap-2 text-xs md:text-sm tracking-[0.2em] uppercase font-normal text-black hover:opacity-50 active:scale-95 transition-transform duration-200 mb-12"
-        >
-          ← {formattedCategory}
-        </Link>
+        <BackButton href={`/work/${categorySlug}`} label={`← ${formattedCategory}`} />
       </div>
 
       <div className="flex flex-col items-center justify-center pt-8 mb-14 md:mb-20">
