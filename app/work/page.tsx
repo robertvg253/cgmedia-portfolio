@@ -26,7 +26,7 @@ export default async function WorkCategoriesPage() {
           <Link
             key={category._id}
             href={`/work/${category.slug}`}
-            className="relative aspect-square w-full block overflow-hidden group active:opacity-70 transition-opacity duration-300 ease-in-out"
+            className="relative aspect-square w-full block overflow-hidden"
           >
             {category.coverImageUrl ? (
               <Image
@@ -39,7 +39,7 @@ export default async function WorkCategoriesPage() {
             ) : (
               <div className="absolute inset-0 bg-gray-200" />
             )}
-            <div className="absolute inset-0 bg-black/30 transition-colors duration-500 hover:bg-black/50" />
+            <div className="absolute inset-0 bg-black/30" />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
               <h2 className="text-white text-xs md:text-sm font-semibold uppercase tracking-[0.2em]">
                 {category.title}
