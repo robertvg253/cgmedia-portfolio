@@ -78,7 +78,7 @@ export default async function CategoryProjectsPage({ params }: { params: Promise
           <Link
             key={project._id}
             href={`/work/${categorySlug}/${project.slug}`}
-            className="relative aspect-square w-full block overflow-hidden group active:opacity-50 transition-opacity duration-100"
+            className="relative aspect-square w-full block overflow-hidden group active:opacity-70 transition-opacity duration-300 ease-in-out"
           >
             {project.coverImageUrl ? (
               <Image

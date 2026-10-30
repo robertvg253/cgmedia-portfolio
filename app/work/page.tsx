@@ -26,7 +26,7 @@ export default async function WorkCategoriesPage() {
           <Link
             key={category._id}
             href={`/work/${category.slug}`}
-            className="relative aspect-square w-full block overflow-hidden group active:opacity-50 transition-opacity duration-100"
+            className="relative aspect-square w-full block overflow-hidden group active:opacity-70 transition-opacity duration-300 ease-in-out"
           >
             {category.coverImageUrl ? (
               <Image
