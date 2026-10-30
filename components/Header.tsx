@@ -77,11 +77,11 @@ export default function Header() {
           isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
-        <nav className="flex flex-col gap-6 text-xl font-light text-black uppercase tracking-widest text-center items-center">
-          <Link href="/" onClick={() => setIsOpen(false)} className="inline-block active:scale-95 transition-transform duration-200 hover:opacity-60">Home</Link>
-          <Link href="/work" onClick={() => setIsOpen(false)} className="inline-block active:scale-95 transition-transform duration-200 hover:opacity-60">Work</Link>
-          <Link href="/about" onClick={() => setIsOpen(false)} className="inline-block active:scale-95 transition-transform duration-200 hover:opacity-60">About</Link>
-          <Link href="/connect" onClick={() => setIsOpen(false)} className="inline-block active:scale-95 transition-transform duration-200 hover:opacity-60">Connect</Link>
+        <nav className="flex flex-col gap-6 text-sm font-semibold text-black uppercase tracking-widest text-center items-center">
+          <Link href="/" onClick={() => setIsOpen(false)} className="inline-block text-sm font-semibold active:scale-95 transition-transform duration-200 hover:opacity-60">Home</Link>
+          <Link href="/work" onClick={() => setIsOpen(false)} className="inline-block text-sm font-semibold active:scale-95 transition-transform duration-200 hover:opacity-60">Work</Link>
+          <Link href="/about" onClick={() => setIsOpen(false)} className="inline-block text-sm font-semibold active:scale-95 transition-transform duration-200 hover:opacity-60">About</Link>
+          <Link href="/connect" onClick={() => setIsOpen(false)} className="inline-block text-sm font-semibold active:scale-95 transition-transform duration-200 hover:opacity-60">Connect</Link>
         </nav>
       </div>
     </header>

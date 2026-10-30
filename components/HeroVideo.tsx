@@ -11,7 +11,6 @@ export default function HeroVideo({
   mobileVideoUrl,
   desktopVideoUrl,
 }: HeroVideoProps) {
-  const mobileVideoRef = useRef<HTMLVideoElement>(null);
   const desktopVideoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -25,22 +24,17 @@ export default function HeroVideo({
       }
     };
 
-    playVideo(mobileVideoRef.current);
     playVideo(desktopVideoRef.current);
-  }, [mobileVideoUrl, desktopVideoUrl]);
+  }, [desktopVideoUrl]);
 
   return (
     <div className="fixed inset-0 -z-10 w-full h-screen bg-black">
       {mobileVideoUrl && (
-        <video
-          ref={mobileVideoRef}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          src={mobileVideoUrl}
-          className="block md:hidden w-full h-full object-cover opacity-80"
+        <div
+          className="w-full h-full md:hidden"
+          dangerouslySetInnerHTML={{
+            __html: `<video autoplay loop muted playsinline defaultMuted preload="auto" class="block md:hidden w-full h-full object-cover opacity-80" src="${mobileVideoUrl}"></video>`,
+          }}
         />
       )}
       {desktopVideoUrl && (

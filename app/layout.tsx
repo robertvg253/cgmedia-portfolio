@@ -1,7 +1,9 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from 'next';
+import type { Viewport } from "next";
 import { Work_Sans, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import ThemeController from "@/components/ThemeController";
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -15,27 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: 'CG Media | Production House',
-    template: '%s | CG Media'
-  },
-  description: 'Miami-based production house specializing in photography and film, focusing on hospitality and lifestyle.',
-  icons: {
-    icon: '/icon.png',
-  },
-  openGraph: {
-    title: 'CG Media | Production House',
-    description: 'Miami-based production house specializing in photography and film, focusing on hospitality and lifestyle.',
-    url: 'https://cgmediaproductions.com',
-    siteName: 'CG Media',
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'CG Media | Production House',
-    description: 'Miami-based production house specializing in photography and film.',
-  }
+  title: 'CG Media | Production House',
+  description: 'Miami-based production house specializing in photography and film.',
+  icons: { icon: '/icon.png' }
 };
 
 export const viewport: Viewport = {
@@ -48,7 +32,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${workSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-black text-white" suppressHydrationWarning>
+      <body className="min-h-full flex flex-col font-sans text-white" suppressHydrationWarning>
+        <ThemeController />
         <Header />
         {children}
       </body>
