@@ -2,6 +2,7 @@ import type { Viewport } from 'next'
 import { client } from '@/sanity/lib/client'
 import { groq } from 'next-sanity'
 import DynamicText from '@/components/DynamicText'
+import HeroVideo from '@/components/HeroVideo'
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -35,31 +36,11 @@ export default async function Home() {
 
   return (
     <>
-      {/* Capa de Fondo Fija */}
-      <div className="fixed inset-0 -z-10 w-full h-screen bg-black">
-        {mobileVideoUrl && (
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            src={mobileVideoUrl}
-            className="block md:hidden w-full h-full object-cover opacity-80"
-          />
-        )}
-        {desktopVideoUrl && (
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            src={desktopVideoUrl}
-            className="hidden md:block w-full h-full object-cover opacity-80"
-          />
-        )}
-      </div>
+      {/* Capa de Fondo Fija con Autoplay Forzado para iOS */}
+      <HeroVideo
+        mobileVideoUrl={mobileVideoUrl}
+        desktopVideoUrl={desktopVideoUrl}
+      />
 
       {/* Capa de Contenido */}
       <main className="relative z-10 w-full">

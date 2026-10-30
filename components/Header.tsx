@@ -77,7 +77,7 @@ export default function Header() {
           isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
-        <nav className="flex flex-col gap-8 text-2xl text-black uppercase tracking-widest text-center items-center">
+        <nav className="flex flex-col gap-6 text-xl font-light text-black uppercase tracking-widest text-center items-center">
           <Link href="/" onClick={() => setIsOpen(false)} className="inline-block active:scale-95 transition-transform duration-200 hover:opacity-60">Home</Link>
           <Link href="/work" onClick={() => setIsOpen(false)} className="inline-block active:scale-95 transition-transform duration-200 hover:opacity-60">Work</Link>
           <Link href="/about" onClick={() => setIsOpen(false)} className="inline-block active:scale-95 transition-transform duration-200 hover:opacity-60">About</Link>
