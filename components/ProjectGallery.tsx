@@ -42,13 +42,13 @@ export default function ProjectGallery({ gallery, projectTitle }: ProjectGallery
             <div
               key={item?._key || index}
               onClick={() => setSelectedImage(rawUrl)}
-              className="relative aspect-square w-full cursor-pointer overflow-hidden"
+              className="relative aspect-square w-full cursor-pointer overflow-hidden bg-white"
             >
               <Image
                 src={thumbUrl || rawUrl}
                 alt={`${projectTitle} gallery image ${index + 1}`}
                 fill
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full bg-white"
                 sizes="(max-width: 768px) 50vw, 33vw"
               />
             </div>

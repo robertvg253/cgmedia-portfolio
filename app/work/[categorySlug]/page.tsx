@@ -78,14 +78,14 @@ export default async function CategoryProjectsPage({ params }: { params: Promise
           <Link
             key={project._id}
             href={`/work/${categorySlug}/${project.slug}`}
-            className="relative aspect-square w-full block overflow-hidden"
+            className="relative aspect-square w-full block overflow-hidden bg-white"
           >
             {project.coverImageUrl && (
               <Image
                 src={project.coverImageUrl}
                 alt={project.title}
                 fill
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full bg-white"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
             )}

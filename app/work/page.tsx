@@ -26,14 +26,14 @@ export default async function WorkCategoriesPage() {
           <Link
             key={category._id}
             href={`/work/${category.slug}`}
-            className="relative aspect-square w-full block overflow-hidden"
+            className="relative aspect-square w-full block overflow-hidden bg-white"
           >
             {category.coverImageUrl && (
               <Image
                 src={category.coverImageUrl}
                 alt={category.title}
                 fill
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full bg-white"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
             )}

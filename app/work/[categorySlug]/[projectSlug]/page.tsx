@@ -85,12 +85,12 @@ export default async function ProjectPage({ params }: { params: Promise<{ catego
           className="w-full h-auto aspect-video object-cover mb-[5px]"
         />
       ) : project.coverImageUrl ? (
-        <div className="relative w-full aspect-video mb-[5px]">
+        <div className="relative w-full aspect-video mb-[5px] bg-white">
           <Image
             src={project.coverImageUrl}
             alt={project.title}
             fill
-            className="object-cover"
+            className="object-cover w-full h-full bg-white"
             sizes="100vw"
             priority
           />
