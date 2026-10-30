@@ -28,16 +28,14 @@ export default async function WorkCategoriesPage() {
             href={`/work/${category.slug}`}
             className="relative aspect-square w-full block overflow-hidden"
           >
-            {category.coverImageUrl ? (
+            {category.coverImageUrl && (
               <Image
                 src={category.coverImageUrl}
                 alt={category.title}
                 fill
-                className="object-cover"
+                className="object-cover w-full h-full"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
-            ) : (
-              <div className="absolute inset-0 bg-gray-200" />
             )}
             <div className="absolute inset-0 bg-black/30" />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">

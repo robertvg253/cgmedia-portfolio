@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 interface BackButtonProps {
@@ -11,6 +11,10 @@ interface BackButtonProps {
 export default function BackButton({ href, label }: BackButtonProps) {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    router.prefetch(href);
+  }, [router, href]);
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();

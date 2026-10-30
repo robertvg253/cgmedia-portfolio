@@ -80,16 +80,14 @@ export default async function CategoryProjectsPage({ params }: { params: Promise
             href={`/work/${categorySlug}/${project.slug}`}
             className="relative aspect-square w-full block overflow-hidden"
           >
-            {project.coverImageUrl ? (
+            {project.coverImageUrl && (
               <Image
                 src={project.coverImageUrl}
                 alt={project.title}
                 fill
-                className="object-cover"
+                className="object-cover w-full h-full"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
-            ) : (
-              <div className="absolute inset-0 bg-gray-200" />
             )}
             <div className="absolute inset-0 bg-black/30" />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">

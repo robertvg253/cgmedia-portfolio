@@ -48,7 +48,7 @@ export default function ProjectGallery({ gallery, projectTitle }: ProjectGallery
                 src={thumbUrl || rawUrl}
                 alt={`${projectTitle} gallery image ${index + 1}`}
                 fill
-                className="object-cover"
+                className="object-cover w-full h-full"
                 sizes="(max-width: 768px) 50vw, 33vw"
               />
             </div>
