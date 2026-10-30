@@ -19,7 +19,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'CG Media | Production House',
   description: 'Miami-based production house specializing in photography and film.',
-  icons: { icon: '/icon.png' }
+  icons: {
+    icon: '/icon.png?v=2',
+    shortcut: '/icon.png?v=2',
+    apple: '/icon.png?v=2',
+  }
 };
 
 export const viewport: Viewport = {
