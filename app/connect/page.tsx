@@ -53,10 +53,10 @@ export default async function ConnectPage() {
                 Direct Contact
               </span>
               <a
-                href="mailto:cgmediaproductions1@gmail.com"
+                href="mailto:Info@cgmediaproductions.com"
                 className="text-xs uppercase tracking-[0.2em] font-medium hover:opacity-60 transition-opacity"
               >
-                CGMEDIAPRODUCTIONS1@GMAIL.COM
+                Info@cgmediaproductions.com
               </a>
             </div>
 

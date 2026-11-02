@@ -79,10 +79,10 @@ export default async function Home() {
           />
 
           <a
-            href="mailto:cgmediaproductions1@gmail.com"
+            href="mailto:Info@cgmediaproductions.com"
             className="inline-block text-xs uppercase tracking-[0.2em] font-medium hover:opacity-60 active:scale-95 transition-transform duration-200"
           >
-            EMAIL: CGMEDIAPRODUCTIONS1@GMAIL.COM
+            Info@cgmediaproductions.com
           </a>
         </div>
       </main>
